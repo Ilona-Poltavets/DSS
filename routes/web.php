@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReasonController;
+use App\Http\Controllers\AttributesController;
+
+Route::resource('reasons',ReasonController::class);
+Route::resource('attributes',AttributesController::class);
 
 /*
 |--------------------------------------------------------------------------
