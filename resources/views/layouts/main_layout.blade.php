@@ -9,6 +9,12 @@
 </head>
 <body>
 <div class="container">
+    <div>
+        <a class="btn btn-primary" href="{{route('reasons.index')}}">Home</a>
+        <a class="btn btn-success" href="{{route('reasons.create')}}">Create reason</a>
+        <a class="btn btn-success" href="{{route('attribute.index')}}">View attributes</a>
+        <a class="btn btn-success" href="{{route('attribute.create')}}">Create attribute</a>
+    </div>
     @yield('content')
 </div>
 </body>

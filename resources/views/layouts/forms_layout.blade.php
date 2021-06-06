@@ -9,7 +9,6 @@
 </head>
 <body>
 <div class="container">
-    <a class="btn btn-primary" href="{{route('reasons.index')}}">Back</a>
     @yield('content')
 </div>
 </body>

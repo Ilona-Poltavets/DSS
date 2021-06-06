@@ -9,7 +9,8 @@
         </div>
     @endif
     <h1>Reasons</h1>
-    <a class="btn btn-success" href="{{route('reasons.create')}}">Create reason</a>
+{{--<a class="btn btn-success" href="{{route('reasons.create')}}">Create reason</a>
+<a class="btn btn-success" href="{{route('attribute.index',$reason->id)}}">View attributes</a>--}}
     <table class='table table-bordered'>
         <tr>
             <th>№</th>
