@@ -27,7 +27,22 @@
                 <td>{{$reason->alarm_id}}</td>
                 <td>{{$reason->priority}}</td>
                 <td>{{$reason->name}}</td>
-                <td><a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="жеееееесть">Attributes of reason</a></td>
+                <td>
+                    @php
+                        $i=1;
+                        $result='';
+                        $attributes=App\Models\Reason::find($reason->id)->attributes;
+                    @endphp
+                    @foreach($attributes as $attribute)
+                        {{--{{$i}}. {{$attribute->description}}--}}
+                        @php
+                            $result=$result . $i . '. ' . $attribute->description . "\n";
+                            $i++;
+                        @endphp
+                    @endforeach
+                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="{{$result}}">Attributes
+                        of reason</a>
+                </td>
                 <td>{{$reason->experts_count}}</td>
                 <td>{{$reason->expert_opinion}}%</td>
                 <td>
