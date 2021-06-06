@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reasons;
+use App\Models\Reason;
+use App\Models\Attribute;
 use Illuminate\Http\Request;
 
 class ReasonController extends Controller
 {
     public function index(){
-        $data['reasons']=Reasons::get();
+        $data['reasons']=Reason::get();
         return view('reasons.index',$data);
     }
     public function create(){
@@ -18,11 +19,11 @@ class ReasonController extends Controller
         $request->validate([
             //'alarm_id'=>'required',
             'name'=>'required',
-            'expert_opinion'=>'required',
+            'expert_opinion'=>'required|between:0,100',
             'experts_count'=>'required',
             'priority'=>'required'
         ]);
-        $reason=new Reasons();
+        $reason=new Reason();
         $reason->name=$request->name;
         $reason->expert_opinion=$request->expert_opinion;
         $reason->experts_count=$request->experts_count;
@@ -30,7 +31,7 @@ class ReasonController extends Controller
         $reason->save();
         return redirect()->route('reasons.index')->with('success','Reason has been created successfully');
     }
-    public function edit(Reasons $reason){
+    public function edit(Reason $reason){
         return view('reasons.edit', compact('reason'));
     }
     public function update(Request $request, $id){
@@ -41,7 +42,7 @@ class ReasonController extends Controller
             'experts_count'=>'required',
             'priority'=>'required'
         ]);
-        $reason=Reasons::find($id);
+        $reason=Reason::find($id);
         $reason->name=$request->name;
         $reason->expert_opinion=$request->expert_opinion;
         $reason->experts_count=$request->experts_count;
@@ -49,7 +50,7 @@ class ReasonController extends Controller
         $reason->save();
         return redirect()->route('reasons.index')->with('success','Reason has been edited successfully');
     }
-    public function destroy(Reasons $reason){
+    public function destroy(Reason $reason){
         $reason->delete();
         return redirect()->route('reasons.index')->with('success','Reason has been deleted successfully');
     }

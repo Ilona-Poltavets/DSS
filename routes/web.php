@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReasonController;
-use App\Http\Controllers\AttributesController;
+use App\Http\Controllers\AttributeController;
 
 Route::resource('reasons',ReasonController::class);
-Route::resource('attributes',AttributesController::class);
+Route::resource('attribute',AttributeController::class);
 
 /*
 |--------------------------------------------------------------------------

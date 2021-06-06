@@ -6,6 +6,7 @@
     @if(session('status'))
         <div class='alert alert-success mb-1 mt-1'>{{ session('status') }}</div>
     @endif
+    <a class="btn btn-success" href="{{route('attribute.create')}}">add attribute</a>
     <form action="{{route('reasons.update',$reason->id)}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">

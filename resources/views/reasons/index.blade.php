@@ -1,6 +1,6 @@
 @extends('layouts.main_layout')
 
-@section('title','Reasons')
+@section('title','Reason')
 
 @section('content')
     @if ($message=Session::get('success'))
@@ -13,25 +13,27 @@
     <table class='table table-bordered'>
         <tr>
             <th>№</th>
-            <th>Alarm id</th>
-            <th>Name</th>
-            <th>Expert opinion</th>
-            <th>Experts count</th>
+            <th width="10px">Alarm id</th>
             <th>Priority</th>
+            <th>Name</th>
+            <th width="100px">Attributes of reason</th>
+            <th>Experts count</th>
+            <th>Opinion of experts in %</th>
             <th width="100px"></th>
         </tr>
         @foreach($reasons as $reason)
             <tr>
                 <td>{{$reason->id}}</td>
                 <td>{{$reason->alarm_id}}</td>
-                <td>{{$reason->name}}</td>
-                <td>{{$reason->expert_opinion}}</td>
-                <td>{{$reason->experts_count}}</td>
                 <td>{{$reason->priority}}</td>
+                <td>{{$reason->name}}</td>
+                <td><a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="жеееееесть">Attributes of reason</a></td>
+                <td>{{$reason->experts_count}}</td>
+                <td>{{$reason->expert_opinion}}%</td>
                 <td>
                     <form action="{{ route('reasons.destroy',$reason->id) }}" method="post">
                         <div class="btn-group">
-                            <a class="btn btn-primary" href="{{route('reasons.edit',$reason->id)}}">edit</a>
+                            <a class="btn btn-primary" href="{{route('reasons.edit',$reason)}}">edit</a>
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

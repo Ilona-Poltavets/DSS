@@ -15,7 +15,7 @@ class CreateReasonsTable extends Migration
     {
         Schema::create('reasons', function (Blueprint $table) {
             $table->id()->unique();
-            $table->integer('alarm_id')->default(null);
+            $table->integer('alarm_id')->nullable(true)->default(null);
             $table->string('name');
             $table->integer('expert_opinion');
             $table->integer('experts_count');

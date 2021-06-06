@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Attributes;
+use Illuminate\Support\Facades\DB;
+use App\Models\Attribute;
+use App\Models\Reason;
 use Illuminate\Http\Request;
 
-class AttributesController extends Controller
+class AttributeController extends Controller
 {
     public function index(){
-        $data['attributes']=Attributes::get();
-        return view('atributes.index');
+        $data['attributes']=Attribute::get();
+        return view('attribute.index');
     }
     public function create(){
         return view('attributes.create');
@@ -19,25 +21,25 @@ class AttributesController extends Controller
             'reason_id'=>'required',
             'description'=>'required'
         ]);
-        $attribut=new Attributes();
+        $attribut=new Attribute();
         $attribut->reason_id=$request->reason_id;
         $attribut->description=$request->description;
         $attribut->save();
-        return redirect()->route('attributes.index')->with('success','Attribut has been created successfully');
+        return redirect()->route('reasons.edit')->with('success','Attribut has been created successfully');
     }
     public function edit(){
-        return view('attributes.index');
+        return view('attribute.index');
     }
     public function update(Request $request, $id){
         $request->validate([
             'reason_id'=>'required',
             'description'=>'required'
         ]);
-        $attribut=Attributes::find($id);
+        $attribut=Attribute::find($id);
         $attribut->reason_id=$request->reason_id;
         $attribut->description=$request->description;
         $attribut->save();
-        return redirect()->route('attributes.index')->with('success','Attribut has been created successfully');
+        return redirect()->route('attribute.index')->with('success','Attribut has been created successfully');
     }
     public function destroy(){
 

@@ -21,7 +21,7 @@
             <div class='col-xs-12 col-sm-12 col-md-12'>
                 <div class="form-group">
                     <label>alarm_id: </label>
-                    <input type="text" name="alarm_id" class="form-control" placeholder="alarm id" disabled />
+                    <input type="text" name="alarm_id" class="form-control" placeholder="alarm id" disabled/>
                 </div>
                 @error('alarm_id')
                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
