@@ -9,8 +9,8 @@
         </div>
     @endif
     <h1>Reasons</h1>
-{{--<a class="btn btn-success" href="{{route('reasons.create')}}">Create reason</a>
-<a class="btn btn-success" href="{{route('attribute.index',$reason->id)}}">View attributes</a>--}}
+    {{--<a class="btn btn-success" href="{{route('reasons.create')}}">Create reason</a>
+    <a class="btn btn-success" href="{{route('attribute.index',$reason->id)}}">View attributes</a>--}}
     <table class='table table-bordered'>
         <tr>
             <th>№</th>
@@ -35,7 +35,6 @@
                         $attributes=App\Models\Reason::find($reason->id)->attributes;
                     @endphp
                     @foreach($attributes as $attribute)
-                        {{--{{$i}}. {{$attribute->description}}--}}
                         @php
                             $result=$result . $i . '. ' . $attribute->description . "\n";
                             $i++;
@@ -49,10 +48,10 @@
                 <td>
                     <form action="{{ route('reasons.destroy',$reason->id) }}" method="post">
                         <div class="btn-group">
-                            <a class="btn btn-primary" href="{{route('reasons.edit',$reason)}}">edit</a>
+                            <a class="btn btn-primary" href="{{route('reasons.edit',$reason)}}"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o fa-2x"></i></button>
                         </div>
                     </form>
                 </td>

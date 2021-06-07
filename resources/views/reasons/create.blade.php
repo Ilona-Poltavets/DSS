@@ -6,7 +6,7 @@
     @if(session('status'))
         <div class='alert alert-success mb-1 mt-1'>{{ session('status') }}</div>
     @endif
-    <a class="btn btn-primary" href="{{route('reasons.index')}}">Back</a>
+    <a class="btn btn-primary" href="{{route('reasons.index')}}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back</a>
     <form action="{{route('reasons.store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">

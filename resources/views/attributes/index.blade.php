@@ -24,10 +24,10 @@
                 <td>
                     <form action="{{ route('attribute.destroy',$attribut->id) }}" method="post">
                         <div class="btn-group">
-                            <a class="btn btn-primary" href="{{route('attribute.edit',$attribut)}}">edit</a>
+                            <a class="btn btn-primary" href="{{route('attribute.edit',$attribut)}}"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o fa-2x"></i></button>
                         </div>
                     </form>
                 </td>

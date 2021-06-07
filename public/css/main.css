@@ -1,4 +1,9 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 th{
     background-color: #718096;
     color:whitesmoke;
+}
+button{
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
 }

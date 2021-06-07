@@ -3,7 +3,7 @@
 @section('title','Create attribute')
 
 @section('content')
-    <a class="btn btn-primary" href="{{route('attribute.index')}}">Back</a>
+    <a class="btn btn-primary" href="{{route('attribute.index')}}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back</a>
     @if(session('status'))
         <div class='alert alert-success mb-1 mt-1'>{{ session('status') }}</div>
     @endif
