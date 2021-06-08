@@ -20,6 +20,11 @@
         <a class="btn btn-success" href="{{route('attribute.index')}}">View attributes</a>
         <a class="btn btn-success" href="{{route('reasons.create')}}">Create reason</a>
         <a class="btn btn-success" href="{{route('attribute.create')}}">Create attribute</a>
+        @guest
+            <a class="btn btn-info" href="{{route('auth.login')}}">Log In</a>
+        @else
+            <a class="btn btn-info" href="{{route('auth.logout')}}">Log Out</a>
+        @endif
     </div>
     @yield('content')
 </div>
