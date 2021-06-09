@@ -19,19 +19,10 @@ Route::resource('attribute',AttributeController::class);
 |
 */
 
-/*Route::group([
-    'as'=>'auth.',
-    'prefix'=>'auth',
-],function(){
-    Route::get('login','app\Http\Controllers\Auth\LoginController@login')->name('login');
-    Route::get('login','Auth\LoginController@authenticate')->name('auth');
-    Route::get('logout','Auth\LoginController@logout')->name('logout');
-});*/
-
 Route::get('/', function () {
     return view('home');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
