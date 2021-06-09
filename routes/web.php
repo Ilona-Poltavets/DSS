@@ -1,13 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReasonController;
 use App\Http\Controllers\AttributeController;
-use App\Http\Controllers\Auth\LoginController;
 
 Route::resource('reasons',ReasonController::class);
 Route::resource('attribute',AttributeController::class);
-Route::resource('auth',LoginController::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +29,9 @@ Route::resource('auth',LoginController::class);
 });*/
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

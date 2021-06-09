@@ -21,9 +21,15 @@
         <a class="btn btn-success" href="{{route('reasons.create')}}">Create reason</a>
         <a class="btn btn-success" href="{{route('attribute.create')}}">Create attribute</a>
         @guest
-            <a class="btn btn-info" href="{{route('auth.login')}}">Log In</a>
+            <a class="btn btn-info" href="{{route('register')}}">Register</a>
+            <a class="btn btn-info" href="{{route('login')}}">Log In</a>
         @else
-            <a class="btn btn-info" href="{{route('auth.logout')}}">Log Out</a>
+            <label class="btn btn-dark">{{ Auth::user()->name }}</label>
+            <a class="btn btn-info" href="{{ route('logout') }}"
+               onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
         @endif
     </div>
     @yield('content')
