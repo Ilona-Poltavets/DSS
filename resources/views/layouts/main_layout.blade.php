@@ -33,6 +33,9 @@
         @endif
     </div>
     @yield('content')
+    <div class="footer">
+        <p>Developed by Ilona Poltavets and Vladislava Maltseva, with the support of Marina Falenkova</p>
+    </div>
 </div>
 </body>
 </html>
