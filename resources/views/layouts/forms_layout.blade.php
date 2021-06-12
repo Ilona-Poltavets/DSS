@@ -9,7 +9,9 @@
 </head>
 <body>
 <div class="container">
-    @yield('content')
+    {{--<div class="row justify-content-center">--}}
+        @yield('content')
+    {{--</div>--}}
 </div>
 </body>
 </html>

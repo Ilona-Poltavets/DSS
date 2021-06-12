@@ -7,6 +7,7 @@ use App\Http\Controllers\AttributeController;
 
 Route::resource('reasons',ReasonController::class);
 Route::resource('attribute',AttributeController::class);
+Route::post('/reasons_find','App\Http\Controllers\ReasonController@find')->name('reasons_find');
 
 /*
 |--------------------------------------------------------------------------
