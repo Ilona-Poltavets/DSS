@@ -13,8 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}<!--че за фигня-->
+                    {{__('lang.logged_in')}}<!--равно тому что выше-->
                 </div>
             </div>
         </div>
