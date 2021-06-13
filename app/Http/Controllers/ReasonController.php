@@ -24,9 +24,9 @@ class ReasonController extends Controller
         $request->validate([
             //'alarm_id'=>'required',
             'name' => 'required',
-            'expert_opinion' => 'required|between:0,100',
+            'expert_opinion' => 'required|min:0|max:100',
             'experts_count' => 'required',
-            'priority' => 'required'
+            'priority' => 'required|integer|min:1|max:5'
         ]);
         $reason = new Reason();
         $reason->name = $request->name;
@@ -47,9 +47,9 @@ class ReasonController extends Controller
         $request->validate([
             //'alarm_id'=>'required',
             'name' => 'required',
-            'expert_opinion' => 'required',
+            'expert_opinion' => 'required|integer|min:0|max:100',
             'experts_count' => 'required',
-            'priority' => 'required'
+            'priority' => 'required|integer|min:1|max:5'
         ]);
         $reason = Reason::find($id);
         $reason->name = $request->name;

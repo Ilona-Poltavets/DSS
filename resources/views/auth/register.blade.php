@@ -1,4 +1,4 @@
-@extends('layouts.forms_layout')
+@extends('layouts.auth_forms_layout')
 
 @section('content')
 <div class="container">
