@@ -10,7 +10,7 @@ class ReasonController extends Controller
 {
     public function index()
     {
-        $data['reasons'] = Reason::orderBy('id','asc')->paginate(10);
+        $data['reasons'] = Reason::get();//->paginate(10);
         return view('reasons.index', $data);
     }
 

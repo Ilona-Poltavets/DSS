@@ -27,7 +27,8 @@
         </div>
     @else
         <h1>Attributes</h1>
-        <table class='table table-bordered'>
+        <table id="example-table" class='table table-bordered'>
+            <thead>
             <tr>
                 <th>№</th>
                 <th>Reason id</th>
@@ -38,6 +39,8 @@
                     @endif
                 @endif
             </tr>
+            </thead>
+            <tbody>
             @foreach($attributes as $attribut)
                 <tr>
                     <td>{{$attribut->id}}</td>
@@ -61,6 +64,8 @@
                     @endif
                 </tr>
             @endforeach
+            </tbody>
         </table>
+        <script>var table = new Tabulator("#example-table", {})</script>
     @endif
 @endsection
