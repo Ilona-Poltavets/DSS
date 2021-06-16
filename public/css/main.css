@@ -11,3 +11,14 @@ button{
     position: absolute;
     bottom: 0;
 }
+#example-table{
+    margin-top: 10px;
+    border-radius: 30px;
+}
+#example-table-theme .tabulator-header .tabulator-col {
+    background-color: #d9d9da;
+    color:#fff;
+}
+#example-table-theme .tabulator-header{
+    background-color: #d9d9da;
+}

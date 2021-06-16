@@ -5,9 +5,9 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" type="text/css"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="{{url('css/main.css')}}"/>
-
     <link href="{{url('css/tabulator.css')}}" rel="stylesheet">
+    <link href="{{url('css/tabulator_bootstrap4.css')}}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url('css/main.css')}}"/>
     <script type="text/javascript" src="{{url('js/jquery_wrapper.js')}}"></script>
     <script type="text/javascript" src="{{url('js/tabulator_core.js')}}"></script>
     <script type="text/javascript" src="{{url('js/tabulator.js')}}"></script>
