@@ -12,7 +12,7 @@
     @if(session('status'))
         <div class='alert alert-success mb-1 mt-1'>{{ session('status') }}</div>
     @endif
-        <a class="btn btn-primary" href="{{route('reasons.index')}}">Home</a>
+    <a class="button" href="{{route('home')}}">Home</a>
     @yield('content')
 </div>
 </body>

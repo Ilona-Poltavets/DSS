@@ -3,8 +3,8 @@
 @section('title','Create attribute')
 
 @section('button_back')
-    <a class="btn btn-primary" href="{{route('attribute.index')}}"><i class="fa fa-long-arrow-left"
-                                                                      aria-hidden="true"></i>Back</a>
+    <a class="button" href="{{route('attribute.index')}}"><i class="fa fa-long-arrow-left"
+                                                             aria-hidden="true"></i>Back</a>
 @endsection
 
 @section('content')
@@ -23,13 +23,13 @@
             <div class='col-xs-12 col-sm-12 col-md-12'>
                 <div class="form-group">
                     <label>Description: </label>
-                    <input type="text" name="description" class="form-control" placeholder="reason id"/>
+                    <input type="text" name="description" class="form-control" placeholder="description"/>
                 </div>
                 @error('description')
                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary ml-3">Submit</button>
+            <button type="submit" class="button">Submit</button>
         </div>
     </form>
 @endsection

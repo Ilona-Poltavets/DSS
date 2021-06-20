@@ -1,5 +1,230 @@
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@font-face {
+    font-family: 'Conv_MyriadPro';
+    src: url('../fonts/MyriadPro-Regular.eot');
+    src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Conv_MyriadPro';
+    src: url('../fonts/MyriadPro-Bold.eot');
+    src: local('☺'), url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf') format('truetype'), url('../fonts/MyriadPro-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+body{
+    font-family: 'Conv_MyriadPro';
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(to right, #dedede 50%, #f9f9f9 50%);
+
+}
 th{
+    background-color: #718096;
+    color:whitesmoke;
+}
+button{
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
+.footer {
+    font-weight: 700;
+    font-size: 19px;
+    position: center;
+    border-radius: 30px 30px 30px 30px;
+    height: 110px;
+    background: #648391;
+    padding: 18px 15px;
+    width: 100%;
+    margin: auto auto 0 auto;
+    bottom: 0;
+}
+.col1 {
+    color:#dedede;
+    width: 33%;
+    float: left;}
+.col2 {
+    background: url('../images/logo.png') 50% 25% /auto 85% no-repeat;
+    left: 33%;
+    height: 80px;
+    width: 34%;
+    float: left;}
+.col3 {
+    color:#dedede;
+    right: 0;
+    width: 33%;
+    text-align: right;
+    float: left;}
+
+.layout{
+    position: absolute;
+}
+.center_picture{
+    background: url('../images/icons-user-profile3.png') 50% 60%/auto 55% no-repeat;
+    width: 100%;
+    height: 710px;
+}
+#main{
+    background: url('../images/back.png') 0 70%/auto 90% no-repeat,
+    url('../images/back2.png') 100% 90%/auto 90% no-repeat;
+    width: 100%;
+    height: 100%;
+
+}
+.left{
+    float: left;
+    color:#727576;
+    font-size:38px;
+    width: 50%;
+    margin: 5% auto 0% 0%;
+    line-height: 0.8;
+}
+.right{
+    float: left;
+    color:#727576;
+    text-align: right;
+    margin: 5% 0% 0% auto;
+    line-height: 0.8;
+    width: 50%;
+    font-size:38px;
+}
+.problem{
+    color:#648391;
+    font-weight: 900;
+    font-size:40px;
+}
+.solution{
+    color:#3da09f;
+    font-weight: 900;
+    font-size:40px;
+}
+a.button {
+    display: inline-block;
+    color: #727576;
+    font-size:30px;
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 0.7em;
+    outline: none;
+    transition: 0.2s;
+    border-radius:25px;
+}
+a.button:hover { background: rgba(135, 135, 135,.2); }
+a.button:active { background: white; }
+#logIn{
+    color: #f9f9f9;
+    background:#648391 ;
+    border-radius: 0px 23px 23px 0px;
+}
+#logIn:hover { background: rgba(100, 131, 145,.8); }
+#logIn:active { background: white; }
+#logOut{
+    color: #f9f9f9;
+    background:#648391 ;
+    border-radius: 23px;
+}
+#logOut:hover { background: rgba(100, 131, 145,.8); }
+#logOut:active { background: white; }
+#register{
+    color: #f9f9f9;
+    background:#648391 ;
+    border-radius: 23px 0px 0px 23px;
+}
+#register:hover { background: rgba(100, 131, 145,.8); }
+#register:active { background: white; }
+.menu{
+    padding-top: 20px;
+}
+.logo{
+    float:left;
+    margin-left: 7%;
+    padding-bottom: 3.45%;
+}
+#logo_btn{
+    height: 120%;
+    background:#648391 ;
+}
+#logo_btn:hover { background: rgba(100, 131, 145,.8); }
+#logo_btn:active { background: white; }
+.buttons{
+    margin-left: auto;
+    margin-right: 7%;
+    text-align: right;
+    width:80%;
+    padding-bottom: 3.45%;
+}
+#create{
+    font-size:28px;
+    background: rgba(100, 131, 145,1);
+    color:white;
+    border-radius: 10px;
+    margin: 0% 3% 0% auto;
+}
+#create:hover { background: rgba(100, 131, 145,.8); }
+#create:active { background: white; }
+.rigth_btn{
+    text-align: right;
+}
+h1{
+    text-align: center;
+    font-weight: 700;
+    color: #3da09f;
+    font-size:44px;
+    margin-bottom: 20px;
+}
+.find{
+    font-size:24px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    color:#4e555b ;
+}
+.find_text{
+    border-radius: 10px;
+    border:0;
+    margin-left:15px;
+    padding-left: 10px;
+}
+#find{
+    font-size:18px;
+    background: rgba(100, 131, 145,1);
+    color:white;
+    border-radius: 10px;
+}
+#logo_btn:hover { background: rgba(100, 131, 145,.8); }
+#logo_btn:active { background: white; }
+.icon{
+    width: 35px;
+    height: 30px;
+}
+#edit{
+    border-radius: 10px 0 0 10px;
+    background: rgb(23,168,153);
+    padding: .25em ;
+}
+#edit:hover { background: rgba(23,168,153,.8); }
+#edit:active  { background: white; }
+#del{
+    border-radius: 0 10px 10px 0;
+    background: rgb(238,35,53);
+    padding: .25em ;
+}
+#del:hover { background: rgba(238,35,53,.8); }
+#del:active { background: white; }
+#modal_close{
+    font-size:18px;
+    border-radius: 10px;
+}
+#modal_logout{
+    font-size:18px;
+    background: rgba(100, 131, 145,1);
+    color:white;
+    border-radius: 10px;
+}
+.modal-body{
+    font-size: 19px;
+}
+/*th{
     background-color: #718096;
     color:whitesmoke;
 }
@@ -10,7 +235,7 @@ button{
 .footer{
     position: absolute;
     bottom: 0;
-}
+}*/
 #example-table{
     margin-top: 10px;
     border-radius: 30px;

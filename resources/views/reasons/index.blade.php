@@ -8,24 +8,27 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <h1>Reasons</h1>
+    <h1>REASONS</h1>
     <form action="{{route('reasons_find')}}" method="post" enctype="multipart/form-data">
-        @csrf
-        Find reason: <input type="text" name="find_reason" value="" placeholder="reason"/>
-        <input class="btn btn-secondary" type="submit" value="find"/>
+        <div class="find">
+            @csrf
+            Find reason: <input type="text" class="find_text" name="find_reason" value="" placeholder="reason"/>
+            <a class="button" id="find" type="submit">find</a>
+        </div>
     </form>
     <table id="example-table" class='table table-bordered'>
         <thead>
         <tr>
             <th width="50">№</th>
+            {{--<th width="10px">Alarm id</th>--}}
             <th>Priority*</th>
             <th>Name</th>
-            <th width="100">Attributes of reason</th>
+            <th width="110">Attributes of reason</th>
             <th>Experts count</th>
             <th>Opinion of experts in %</th>
             @auth
                 @if(\Illuminate\Support\Facades\Auth::user()->name=='admin')
-                    <th width="130">Action</th>
+                    <th width="125">Action</th>
                 @endif
             @endif
         </tr>
@@ -34,13 +37,13 @@
         @foreach($reasons as $reason)
             <tr>
                 <td>{{$reason->id}}</td>
+                {{--<td>{{$reason->alarm_id}}</td>--}}
                 <td>{{$reason->priority}}</td>
                 <td>{{$reason->name}}</td>
                 <td>
                     @php($reasonController=new \App\Http\Controllers\ReasonController())
                     <a href="#" data-bs-toggle="tooltip" data-bs-placement="right"
-                       title="{{$reasonController->getAttributes($reason->id)}}">Attributes
-                        of reason</a>
+                       title="{{$reasonController->getAttributes($reason->id)}}">Attributes</a>
                 </td>
                 <td>{{$reason->experts_count}}</td>
                 <td>{{$reason->expert_opinion}}%</td>
@@ -49,12 +52,12 @@
                         <td>
                             <form action="{{ route('reasons.destroy',$reason->id) }}" method="post">
                                 <div class="btn-group">
-                                    <a class="btn btn-primary" href="{{route('reasons.edit',$reason)}}"><i
-                                            class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
+                                    <a class="button" id="edit" href="{{route('reasons.edit',$reason)}}"><img
+                                            class="icon" src="{{url('images/edit2.png')}}"></a>
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o fa-2x"></i>
-                                    </button>
+                                    <a class="button" id="del"><img class="icon" src="{{url('images/delete2.png')}}">
+                                    </a>
                                 </div>
                             </form>
                         </td>
@@ -87,5 +90,12 @@
                     @endif
                 ]
         })</script>
+    <div class="rigth_btn">
+        @auth
+            @if(\Illuminate\Support\Facades\Auth::user()->name=='admin')
+                <a class="button" id="create" href="{{route('reasons.create')}}">Create reason</a>
+            @endif
+        @endif
+    </div>
     {{-- $reasons->links() --}}
 @endsection
