@@ -8,11 +8,13 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <h1>Reasons</h1>
+    <h1>REASONS</h1>
     <form action="{{route('reasons_find')}}" method="post" enctype="multipart/form-data">
-        @csrf
-        Find reason: <input type="text" name="find_reason" value="" placeholder="reason"/>
-        <input class="btn btn-secondary" type="submit" value="find"/>
+        <div class="find">
+            @csrf
+            Find reason: <input type="text" class="find_text" name="find_reason" value="" placeholder="reason"/>
+            <a class="button" id="find" type="submit">find</a>
+        </div>
     </form>
     <table class='table table-bordered'>
         <tr>
@@ -48,19 +50,27 @@
                         <td>
                             <form action="{{ route('reasons.destroy',$reason->id) }}" method="post">
                                 <div class="btn-group">
-                                    <a class="btn btn-primary" href="{{route('reasons.edit',$reason)}}"><i
-                                            class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
+                                    <a class="button" id="edit" href="{{route('reasons.edit',$reason)}}"><img
+                                            class="icon" src="{{url('images/edit2.png')}}"></a>
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o fa-2x"></i>
-                                    </button>
+                                    <a class="button" id="del"><img class="icon" src="{{url('images/delete2.png')}}">
+                                    </a>
                                 </div>
                             </form>
                         </td>
                     @endif
                 @endif
+
             </tr>
         @endforeach
     </table>
+    <div class="rigth_btn">
+        @auth
+            @if(\Illuminate\Support\Facades\Auth::user()->name=='admin')
+                <a class="button" id="create" href="{{route('reasons.create')}}">Create reason</a>
+            @endif
+        @endif
+    </div>
     {{-- $reasons->links() --}}
 @endsection

@@ -3,7 +3,7 @@
 @section('title','Create Reason')
 
 @section('button_back')
-    <a class="btn btn-primary" href="{{route('reasons.index')}}"><i class="fa fa-long-arrow-left"
+    <a class="button" href="{{route('reasons.index')}}"><i class="fa fa-long-arrow-left"
                                                                     aria-hidden="true"></i>Back</a>
 @endsection
 
@@ -57,7 +57,8 @@
                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary ml-3">Submit</button>
+
+            <button type="submit" class="button">Submit</button>
         </div>
     </form>
 @endsection

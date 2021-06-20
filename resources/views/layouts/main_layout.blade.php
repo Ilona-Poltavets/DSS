@@ -12,32 +12,56 @@
     <script type="text/javascript" src="{{url('js/script.js')}}"></script>
     <script type="text/javascript" src="{{url('js/jquery.min.js')}}"></script>
     --}}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <div>
-        <a class="btn btn-primary" href="{{route('reasons.index')}}">Home</a>
-        @guest
-            <a class="btn btn-info" href="{{route('register')}}">Register</a>
-            <a class="btn btn-info" href="{{route('login')}}">Log In</a>
-        @else
-            <a class="btn btn-success" href="{{route('attribute.index')}}">View attributes</a>
-            @if(\Illuminate\Support\Facades\Auth::user()->name=='admin')
-                <a class="btn btn-success" href="{{route('reasons.create')}}">Create reason</a>
-                <a class="btn btn-success" href="{{route('attribute.create')}}">Create attribute</a>
-            @endif
-            <label class="btn btn-dark">{{ Auth::user()->name }}</label>
-            <a class="btn btn-info" href="{{ route('logout') }}"
-               onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
+<div id="main">
+    <div class="menu">
+        <div class="logo"><a class="button" id="logo_btn" href="{{route('home')}}"><img
+                    src="{{url('images/logo_btn2.png')}}"></a></div>
+        <div class="buttons">
+            <a class="button" href="{{route('reasons.index')}}">Reasons</a>
+            @guest
+                <a class="button" id="register" href="{{route('register')}}">Register</a>
+                <a class="button" id="logIn" href="{{route('login')}}">Log In</a>
+            @else
+                <a class="button" href="{{route('attribute.index')}}">Attributes</a>
+                <a class="button">{{ Auth::user()->name }}</a>
+                <a type="button" class="button" id="logOut" data-toggle="modal" data-target="#logOutModal">
+                    Logout
+                </a>
+                <div class="modal fade" id="logOutModal" tabindex="-1" role="dialog" aria-labelledby="LogOutLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="LogOutLabel">Log out</h5>
+                                @csrf
+                                </form>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to log out?
+                            </div>
+                            <div class="modal-footer">
+                                <a class="button" id="modal_close" data-bs-dismiss="modal">Close</a>
+                                <a class="button" id="modal_logout" data-toggle="modal" data-target="LogOutModal" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
         @endif
     </div>
-    @yield('content')
-    <div class="footer">
-        <p>Developed by Ilona Poltavets and Vladislava Maltseva, with the support of Marina Falenkova</p>
+    <div class="container">
+        @yield('content')
     </div>
 </div>
+
 </body>
 </html>

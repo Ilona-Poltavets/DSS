@@ -23,8 +23,10 @@ Route::post('/reasons_find','App\Http\Controllers\ReasonController@find')->name(
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
