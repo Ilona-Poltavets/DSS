@@ -10,7 +10,6 @@
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
-
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label ">{{ __('Name :') }}</label>
 
@@ -63,9 +62,9 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <a type="submit" class="button" id="login">
+                                    <button type="submit" class="button" id="login">
                                         {{ __('Register') }}
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </form>
