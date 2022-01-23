@@ -20,18 +20,18 @@ body {
     font-family: 'Conv_MyriadPro';
     width: 100%;
     height: 900px;
-    background: linear-gradient(to right, #dedede 50%, #f9f9f9 50%);
+    background: linear-gradient(to right, #212121 50%, #060606 50%);
 
 }
 
 th {
-    background-color: #718096;
-    color: whitesmoke;
+    background-color: #8e7f69;
+    color: #000a0a;
 }
 
 button {
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
 }
 
 .footer {
@@ -39,17 +39,16 @@ button {
     font-size: 19px;
     position: center;
     border-radius: 30px 30px 30px 30px;
-    min-height: 100px;
-    background: #648391;
+    height: 110px;
+    background: #9b7c6e;
     padding: 18px 15px;
     width: 100%;
     margin: auto auto 0 auto;
     bottom: 0;
-    max-height: 200px;
 }
 
 .col1 {
-    color: #dedede;
+    color: #212121;
     width: 33%;
     float: left;
 }
@@ -63,7 +62,7 @@ button {
 }
 
 .col3 {
-    color: #dedede;
+    color: #212121;
     right: 0;
     width: 33%;
     text-align: right;
@@ -81,8 +80,8 @@ button {
 }
 
 #main {
-    background: url('../images/back.png') 0 70%/auto 90% no-repeat,
-    url('../images/back2.png') 100% 90%/auto 90% no-repeat;
+    background: url('../images/back_dark.png') 0 70%/auto 90% no-repeat,
+    url('../images/back2_dark.png') 100% 90%/auto 90% no-repeat;
     width: 100%;
     height: 100%;
 
@@ -90,7 +89,7 @@ button {
 
 .left {
     float: left;
-    color: #727576;
+    color: #8d8a89;
     font-size: 38px;
     width: 50%;
     margin: 5% auto 0% 0%;
@@ -99,7 +98,7 @@ button {
 
 .right {
     float: left;
-    color: #727576;
+    color: #8d8a89;
     text-align: right;
     margin: 5% 0% 0% auto;
     line-height: 0.8;
@@ -108,20 +107,20 @@ button {
 }
 
 .problem {
-    color: #648391;
+    color: #9b7c6e;
     font-weight: 900;
     font-size: 40px;
 }
 
 .solution {
-    color: #3da09f;
+    color: #c25f60;
     font-weight: 900;
     font-size: 40px;
 }
 
 a.button {
     display: inline-block;
-    color: #727576;
+    color: #8d8a89;
     font-size: 30px;
     text-decoration: none;
     user-select: none;
@@ -132,7 +131,7 @@ a.button {
 }
 
 a.button:hover {
-    background: rgba(135, 135, 135, .2);
+    background: rgba(120, 120, 120, 0.2);
 }
 
 a.button:active {
@@ -140,13 +139,13 @@ a.button:active {
 }
 
 #logIn {
-    color: #f9f9f9;
-    background: #648391;
+    color: #060606;
+    background: #9b7c6e;
     border-radius: 0px 23px 23px 0px;
 }
 
 #logIn:hover {
-    background: rgba(100, 131, 145, .8);
+    background: rgba(155, 124, 110, .8);
 }
 
 #logIn:active {
@@ -154,13 +153,13 @@ a.button:active {
 }
 
 #logOut {
-    color: #f9f9f9;
-    background: #648391;
+    color: #060606;
+    background: #9b7c6e;
     border-radius: 23px;
 }
 
 #logOut:hover {
-    background: rgba(100, 131, 145, .8);
+    background: rgba(155, 124, 110, .8);
 }
 
 #logOut:active {
@@ -168,13 +167,13 @@ a.button:active {
 }
 
 #register {
-    color: #f9f9f9;
-    background: #648391;
+    color: #060606;
+    background: #9b7c6e;
     border-radius: 23px 0px 0px 23px;
 }
 
 #register:hover {
-    background: rgba(100, 131, 145, .8);
+    background: rgba(155, 124, 110, .8);
 }
 
 #register:active {
@@ -193,11 +192,11 @@ a.button:active {
 
 #logo_btn {
     height: 120%;
-    background: #648391;
+    background: #9b7c6e;
 }
 
 #logo_btn:hover {
-    background: rgba(100, 131, 145, .8);
+    background: rgba(155, 124, 110, .8);
 }
 
 #logo_btn:active {
@@ -221,7 +220,7 @@ a.button:active {
 }
 
 #create:hover {
-    background: rgba(100, 131, 145, .8);
+    background: rgba(155, 124, 110, .8);
 }
 
 #create:active {
@@ -235,7 +234,7 @@ a.button:active {
 h1 {
     text-align: center;
     font-weight: 700;
-    color: #3da09f;
+    color: #c25f60;
     font-size: 44px;
     margin-bottom: 20px;
 }
@@ -244,7 +243,7 @@ h1 {
     font-size: 24px;
     padding-left: 20px;
     padding-bottom: 15px;
-    color: #4e555b;
+    color: #b1aaa4;
 }
 
 .find_text {
@@ -256,13 +255,13 @@ h1 {
 
 #find {
     font-size: 18px;
-    background: rgba(100, 131, 145, 1);
+    background: rgba(155, 124, 110, 1);
     color: white;
     border-radius: 10px;
 }
 
 #logo_btn:hover {
-    background: rgba(100, 131, 145, .8);
+    background: rgba(155, 124, 110, .8);
 }
 
 #logo_btn:active {
@@ -281,7 +280,7 @@ h1 {
 }
 
 #edit:hover {
-    background: rgba(23, 168, 153, .8);
+    background: rgba(232, 87, 102, .8);
 }
 
 #edit:active {
@@ -290,12 +289,12 @@ h1 {
 
 #del {
     border-radius: 0 10px 10px 0;
-    background: rgb(238, 35, 53);
+    background: rgb(17, 220, 202);
     padding: .25em;
 }
 
 #del:hover {
-    background: rgba(238, 35, 53, .8);
+    background: rgba(17, 220, 202, .8);
 }
 
 #del:active {
@@ -309,7 +308,7 @@ h1 {
 
 #modal_logout {
     font-size: 18px;
-    background: rgba(100, 131, 145, 1);
+    background: rgba(155, 124, 110, 1);
     color: white;
     border-radius: 10px;
 }
@@ -324,14 +323,14 @@ h1 {
 }
 
 #example-table-theme .tabulator-header .tabulator-col {
-    background-color: #d9d9da;
+    background-color: #262625;
     color: #fff;
 }
 
 #example-table-theme .tabulator-header {
-    background-color: #d9d9da;
+    background-color: #262625;
 }
-
+/*********************************/
 .switch {
     position: relative;
     display: inline-block;
@@ -368,11 +367,11 @@ h1 {
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #9b7c6e /*#2196F3;*/
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #9b7c6e /*#2196F3;*/
 }
 
 input:checked + .slider:before {
@@ -381,6 +380,7 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+/* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }
@@ -399,7 +399,7 @@ input:checked + .slider:before {
     right: 0;
     bottom: 0;
     /* фоновый цвет элемента */
-    background: #e0e0e0;
+    background: #212121;
     /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
 }
@@ -420,7 +420,7 @@ input:checked + .slider:before {
     position: absolute;
     display: inline-block;
     top: 0;
-    background-color: #337ab7;
+    background-color: #9b7c6e;
     border-radius: 100%;
     width: 35px;
     height: 35px;

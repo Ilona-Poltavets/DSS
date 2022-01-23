@@ -1,3 +1,7 @@
+$(window).on('load', function() {
+    $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
+});
+
 //var btn = document.getElementById("theme-button");
 var link = document.getElementById("theme-link");
 
@@ -5,9 +9,8 @@ var link = document.getElementById("theme-link");
 
 function ChangeTheme()
 {
-    console.log('run');
-    let lightTheme = "../css/main.css";
-    let darkTheme = "../css/main_dark.css";
+    let lightTheme = "../css/forms.css";
+    let darkTheme = "../css/forms_dark.css";
 
     var currTheme = link.getAttribute("href");
     var theme = "";

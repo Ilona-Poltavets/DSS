@@ -50,14 +50,14 @@
                 @auth
                     @if(\Illuminate\Support\Facades\Auth::user()->name=='admin')
                         <td>
-                            <form action="{{ route('reasons.destroy',$reason->id) }}" method="post">
+                            <form action="{{ route('reasons.destroy', $reason->id) }}" method="post">
                                 <div class="btn-group">
                                     <a class="button" id="edit" href="{{route('reasons.edit',$reason)}}"><img
                                             class="icon" src="{{url('images/edit2.png')}}"></a>
                                     @csrf
                                     @method('DELETE')
-                                    <a class="button" id="del"><img class="icon" src="{{url('images/delete2.png')}}">
-                                    </a>
+                                    <button type="submit" class="button" id="del"><img class="icon" src="{{url('images/delete2.png')}}">
+                                    </button>
                                 </div>
                             </form>
                         </td>
